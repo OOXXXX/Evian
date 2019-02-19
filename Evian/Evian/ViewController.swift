@@ -8,9 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController{
 
-    override func viewDidLoad() {
+    override func viewDidLoad(){
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.view.backgroundColor = UIColor.init(red: 254.0/255.0, green: 228.0/255.0, blue: 17.0/255.0, alpha: 1.0)
@@ -22,11 +22,22 @@ class ViewController: UIViewController {
         label.backgroundColor = UIColor.brown
         label.textAlignment = .center
         label.textColor = UIColor.white
-        label.shadowColor = UIColor.white
-        label.shadowOffset = CGSize(width: 1, height: 2)
         label.adjustsFontSizeToFitWidth = true
-        
         self.view.addSubview(label)
+       
+        let botton = UIButton(type: .custom)
+        botton.frame = CGRect(x: 170, y: 650, width: 80, height: 80)
+        botton.layer.cornerRadius = 40
+        botton.layer.masksToBounds = true
+        botton.backgroundColor = UIColor.black
+        botton.addTarget(self, action: #selector(changeColour), for: .touchUpInside)
+        self.view.addSubview(botton)
+        
+        
+    }
+    @objc func changeColour()
+    {
+        self.view.backgroundColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.0)
     }
 
 
