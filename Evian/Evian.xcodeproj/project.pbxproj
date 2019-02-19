@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5FD9AFA7221BDCFC00A07884 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD9AFA6221BDCFC00A07884 /* AppDelegate.swift */; };
+		5FD9AFA9221BDCFC00A07884 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD9AFA8221BDCFC00A07884 /* ViewController.swift */; };
+		5FD9AFAC221BDCFC00A07884 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FD9AFAA221BDCFC00A07884 /* Main.storyboard */; };
+		5FD9AFAE221BDCFD00A07884 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FD9AFAD221BDCFD00A07884 /* Assets.xcassets */; };
+		5FD9AFB1221BDCFD00A07884 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FD9AFAF221BDCFD00A07884 /* LaunchScreen.storyboard */; };
+		5FD9AFBC221BDCFD00A07884 /* EvianTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD9AFBB221BDCFD00A07884 /* EvianTests.swift */; };
+		5FD9AFC7221BDCFD00A07884 /* EvianUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD9AFC6221BDCFD00A07884 /* EvianUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5FD9AFB8221BDCFD00A07884 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5FD9AF9B221BDCFC00A07884 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5FD9AFA2221BDCFC00A07884;
+			remoteInfo = Evian;
+		};
+		5FD9AFC3221BDCFD00A07884 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5FD9AF9B221BDCFC00A07884 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5FD9AFA2221BDCFC00A07884;
+			remoteInfo = Evian;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5FD9AFA3221BDCFC00A07884 /* Evian.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Evian.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FD9AFA6221BDCFC00A07884 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5FD9AFA8221BDCFC00A07884 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5FD9AFAB221BDCFC00A07884 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5FD9AFAD221BDCFD00A07884 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5FD9AFB0221BDCFD00A07884 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5FD9AFB2221BDCFD00A07884 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FD9AFB7221BDCFD00A07884 /* EvianTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EvianTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FD9AFBB221BDCFD00A07884 /* EvianTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvianTests.swift; sourceTree = "<group>"; };
+		5FD9AFBD221BDCFD00A07884 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FD9AFC2221BDCFD00A07884 /* EvianUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EvianUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FD9AFC6221BDCFD00A07884 /* EvianUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvianUITests.swift; sourceTree = "<group>"; };
+		5FD9AFC8221BDCFD00A07884 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5FD9AFA0221BDCFC00A07884 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FD9AFB4221BDCFD00A07884 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FD9AFBF221BDCFD00A07884 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5FD9AF9A221BDCFC00A07884 = {
+			isa = PBXGroup;
+			children = (
+				5FD9AFA5221BDCFC00A07884 /* Evian */,
+				5FD9AFBA221BDCFD00A07884 /* EvianTests */,
+				5FD9AFC5221BDCFD00A07884 /* EvianUITests */,
+				5FD9AFA4221BDCFC00A07884 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5FD9AFA4221BDCFC00A07884 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5FD9AFA3221BDCFC00A07884 /* Evian.app */,
+				5FD9AFB7221BDCFD00A07884 /* EvianTests.xctest */,
+				5FD9AFC2221BDCFD00A07884 /* EvianUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5FD9AFA5221BDCFC00A07884 /* Evian */ = {
+			isa = PBXGroup;
+			children = (
+				5FD9AFA6221BDCFC00A07884 /* AppDelegate.swift */,
+				5FD9AFA8221BDCFC00A07884 /* ViewController.swift */,
+				5FD9AFAA221BDCFC00A07884 /* Main.storyboard */,
+				5FD9AFAD221BDCFD00A07884 /* Assets.xcassets */,
+				5FD9AFAF221BDCFD00A07884 /* LaunchScreen.storyboard */,
+				5FD9AFB2221BDCFD00A07884 /* Info.plist */,
+			);
+			path = Evian;
+			sourceTree = "<group>";
+		};
+		5FD9AFBA221BDCFD00A07884 /* EvianTests */ = {
+			isa = PBXGroup;
+			children = (
+				5FD9AFBB221BDCFD00A07884 /* EvianTests.swift */,
+				5FD9AFBD221BDCFD00A07884 /* Info.plist */,
+			);
+			path = EvianTests;
+			sourceTree = "<group>";
+		};
+		5FD9AFC5221BDCFD00A07884 /* EvianUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5FD9AFC6221BDCFD00A07884 /* EvianUITests.swift */,
+				5FD9AFC8221BDCFD00A07884 /* Info.plist */,
+			);
+			path = EvianUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5FD9AFA2221BDCFC00A07884 /* Evian */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5FD9AFCB221BDCFD00A07884 /* Build configuration list for PBXNativeTarget "Evian" */;
+			buildPhases = (
+				5FD9AF9F221BDCFC00A07884 /* Sources */,
+				5FD9AFA0221BDCFC00A07884 /* Frameworks */,
+				5FD9AFA1221BDCFC00A07884 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Evian;
+			productName = Evian;
+			productReference = 5FD9AFA3221BDCFC00A07884 /* Evian.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5FD9AFB6221BDCFD00A07884 /* EvianTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5FD9AFCE221BDCFD00A07884 /* Build configuration list for PBXNativeTarget "EvianTests" */;
+			buildPhases = (
+				5FD9AFB3221BDCFD00A07884 /* Sources */,
+				5FD9AFB4221BDCFD00A07884 /* Frameworks */,
+				5FD9AFB5221BDCFD00A07884 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5FD9AFB9221BDCFD00A07884 /* PBXTargetDependency */,
+			);
+			name = EvianTests;
+			productName = EvianTests;
+			productReference = 5FD9AFB7221BDCFD00A07884 /* EvianTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5FD9AFC1221BDCFD00A07884 /* EvianUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5FD9AFD1221BDCFD00A07884 /* Build configuration list for PBXNativeTarget "EvianUITests" */;
+			buildPhases = (
+				5FD9AFBE221BDCFD00A07884 /* Sources */,
+				5FD9AFBF221BDCFD00A07884 /* Frameworks */,
+				5FD9AFC0221BDCFD00A07884 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5FD9AFC4221BDCFD00A07884 /* PBXTargetDependency */,
+			);
+			name = EvianUITests;
+			productName = EvianUITests;
+			productReference = 5FD9AFC2221BDCFD00A07884 /* EvianUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5FD9AF9B221BDCFC00A07884 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Back to Bedlam";
+				TargetAttributes = {
+					5FD9AFA2221BDCFC00A07884 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					5FD9AFB6221BDCFD00A07884 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 5FD9AFA2221BDCFC00A07884;
+					};
+					5FD9AFC1221BDCFD00A07884 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 5FD9AFA2221BDCFC00A07884;
+					};
+				};
+			};
+			buildConfigurationList = 5FD9AF9E221BDCFC00A07884 /* Build configuration list for PBXProject "Evian" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5FD9AF9A221BDCFC00A07884;
+			productRefGroup = 5FD9AFA4221BDCFC00A07884 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5FD9AFA2221BDCFC00A07884 /* Evian */,
+				5FD9AFB6221BDCFD00A07884 /* EvianTests */,
+				5FD9AFC1221BDCFD00A07884 /* EvianUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5FD9AFA1221BDCFC00A07884 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FD9AFB1221BDCFD00A07884 /* LaunchScreen.storyboard in Resources */,
+				5FD9AFAE221BDCFD00A07884 /* Assets.xcassets in Resources */,
+				5FD9AFAC221BDCFC00A07884 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FD9AFB5221BDCFD00A07884 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FD9AFC0221BDCFD00A07884 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5FD9AF9F221BDCFC00A07884 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FD9AFA9221BDCFC00A07884 /* ViewController.swift in Sources */,
+				5FD9AFA7221BDCFC00A07884 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FD9AFB3221BDCFD00A07884 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FD9AFBC221BDCFD00A07884 /* EvianTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FD9AFBE221BDCFD00A07884 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FD9AFC7221BDCFD00A07884 /* EvianUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5FD9AFB9221BDCFD00A07884 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5FD9AFA2221BDCFC00A07884 /* Evian */;
+			targetProxy = 5FD9AFB8221BDCFD00A07884 /* PBXContainerItemProxy */;
+		};
+		5FD9AFC4221BDCFD00A07884 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5FD9AFA2221BDCFC00A07884 /* Evian */;
+			targetProxy = 5FD9AFC3221BDCFD00A07884 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5FD9AFAA221BDCFC00A07884 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5FD9AFAB221BDCFC00A07884 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5FD9AFAF221BDCFD00A07884 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5FD9AFB0221BDCFD00A07884 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5FD9AFC9221BDCFD00A07884 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5FD9AFCA221BDCFD00A07884 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5FD9AFCC221BDCFD00A07884 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6MM6Y2NK23;
+				INFOPLIST_FILE = Evian/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Patrick.Evian;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5FD9AFCD221BDCFD00A07884 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6MM6Y2NK23;
+				INFOPLIST_FILE = Evian/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Patrick.Evian;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5FD9AFCF221BDCFD00A07884 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6MM6Y2NK23;
+				INFOPLIST_FILE = EvianTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Patrick.EvianTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Evian.app/Evian";
+			};
+			name = Debug;
+		};
+		5FD9AFD0221BDCFD00A07884 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6MM6Y2NK23;
+				INFOPLIST_FILE = EvianTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Patrick.EvianTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Evian.app/Evian";
+			};
+			name = Release;
+		};
+		5FD9AFD2221BDCFD00A07884 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6MM6Y2NK23;
+				INFOPLIST_FILE = EvianUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Patrick.EvianUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Evian;
+			};
+			name = Debug;
+		};
+		5FD9AFD3221BDCFD00A07884 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6MM6Y2NK23;
+				INFOPLIST_FILE = EvianUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Patrick.EvianUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Evian;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5FD9AF9E221BDCFC00A07884 /* Build configuration list for PBXProject "Evian" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FD9AFC9221BDCFD00A07884 /* Debug */,
+				5FD9AFCA221BDCFD00A07884 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5FD9AFCB221BDCFD00A07884 /* Build configuration list for PBXNativeTarget "Evian" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FD9AFCC221BDCFD00A07884 /* Debug */,
+				5FD9AFCD221BDCFD00A07884 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5FD9AFCE221BDCFD00A07884 /* Build configuration list for PBXNativeTarget "EvianTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FD9AFCF221BDCFD00A07884 /* Debug */,
+				5FD9AFD0221BDCFD00A07884 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5FD9AFD1221BDCFD00A07884 /* Build configuration list for PBXNativeTarget "EvianUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FD9AFD2221BDCFD00A07884 /* Debug */,
+				5FD9AFD3221BDCFD00A07884 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5FD9AF9B221BDCFC00A07884 /* Project object */;
+}
