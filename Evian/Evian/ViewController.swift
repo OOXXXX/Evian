@@ -36,8 +36,20 @@ class ViewController: UIViewController{
         botton.addTarget(self, action: #selector(changeColour), for: .touchUpInside)
         self.view.addSubview(botton)
         
+        let btHideNavBar = UIButton(frame: CGRect(x: 30, y: 200, width: 355, height: 90))
+        btHideNavBar.setTitle("隐藏", for: UIControl.State())
+        btHideNavBar.backgroundColor = UIColor.brown
+        btHideNavBar.titleLabel?.font = UIFont.systemFont(ofSize: 55, weight: UIFont.Weight(rawValue: 2))
+        btHideNavBar.addTarget(self, action: #selector(ViewController.hideNavigationBar), for:  .touchUpInside)
+        self.view.addSubview(btHideNavBar)
         
     }
+    
+    @objc func hideNavigationBar()
+    {
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
     @objc func changeColour()
     {
         self.view.backgroundColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.0)
