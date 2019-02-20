@@ -7,12 +7,15 @@
 //
 
 import UIKit
+let SCREEN_SIZE = UIScreen.main.bounds.size
 
 class ViewController: UIViewController{
 
     override func viewDidLoad(){
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        
         self.view.backgroundColor = UIColor.init(red: 254.0/255.0, green: 228.0/255.0, blue: 17.0/255.0, alpha: 1.0)
         
         let rect = CGRect(x: 30, y: 100, width: 355, height: 90)
