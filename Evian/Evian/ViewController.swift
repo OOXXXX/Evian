@@ -43,6 +43,13 @@ class ViewController: UIViewController{
         btHideNavBar.addTarget(self, action: #selector(ViewController.hideNavigationBar), for:  .touchUpInside)
         self.view.addSubview(btHideNavBar)
         
+        let topLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 180, height: 30))
+        topLabel.text = "主页面"
+        topLabel.textAlignment = NSTextAlignment.center
+        self.navigationItem.titleView = topLabel
+        
+        
+        
     }
     
     @objc func hideNavigationBar()
@@ -54,6 +61,7 @@ class ViewController: UIViewController{
     {
         self.view.backgroundColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.0)
     }
+    
 
 
 }
