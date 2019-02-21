@@ -25,14 +25,18 @@ class ViewController: UIViewController{
         label.backgroundColor = UIColor.brown
         label.textAlignment = .center
         label.textColor = UIColor.white
+        label.layer.cornerRadius = 20
+        label.layer.masksToBounds = true
         label.adjustsFontSizeToFitWidth = true
         self.view.addSubview(label)
        
         let botton = UIButton(type: .custom)
-        botton.frame = CGRect(x: 170, y: 650, width: 80, height: 80)
-        botton.layer.cornerRadius = 40
+        botton.frame = CGRect(x: 30, y: 300, width: 355, height: 90)
+        botton.layer.cornerRadius = 20
         botton.layer.masksToBounds = true
-        botton.backgroundColor = UIColor.black
+        botton.backgroundColor = UIColor.brown
+        botton.setTitle("变色", for: UIControl.State())
+        botton.titleLabel?.font = UIFont.systemFont(ofSize: 55, weight: UIFont.Weight(rawValue: 2))
         botton.addTarget(self, action: #selector(changeColour), for: .touchUpInside)
         self.view.addSubview(botton)
         
@@ -40,6 +44,7 @@ class ViewController: UIViewController{
         btHideNavBar.setTitle("隐藏", for: UIControl.State())
         btHideNavBar.backgroundColor = UIColor.brown
         btHideNavBar.titleLabel?.font = UIFont.systemFont(ofSize: 55, weight: UIFont.Weight(rawValue: 2))
+        btHideNavBar.layer.cornerRadius = 20
         btHideNavBar.addTarget(self, action: #selector(ViewController.hideNavigationBar), for:  .touchUpInside)
         self.view.addSubview(btHideNavBar)
         
@@ -59,7 +64,7 @@ class ViewController: UIViewController{
     
     @objc func changeColour()
     {
-        self.view.backgroundColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.0)
+       self.view.backgroundColor = UIColor(red: CGFloat(arc4random()%255)/255.0, green: CGFloat(arc4random()%255)/255.0, blue: CGFloat(arc4random()%255)/255.0, alpha: 1)
     }
     
 
