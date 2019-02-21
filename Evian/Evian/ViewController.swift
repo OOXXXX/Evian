@@ -58,11 +58,24 @@ class ViewController: UIViewController, AVAudioPlayerDelegate{
         topLabel.font = UIFont.systemFont(ofSize: 20)
         self.navigationItem.titleView = topLabel
         
-        let path = Bundle.main.path(forResource: "music", ofType: "mp3")
-        let soundUrl = URL(fileURLWithPath: path!)
         
+        
+        let session = AVAudioSession.sharedInstance()
         do{
+            try session.setActive(true)
+            if #available(iOS 10.0, *) {
+                try session.setCategory(.playback, mode:  .default)
+            }
+            else
+            {
+
+            }
+            UIApplication.shared.beginReceivingRemoteControlEvents()
+            
+            let path = Bundle.main.path(forResource: "music", ofType: "mp3")
+            let soundUrl = URL(fileURLWithPath: path!)
             try audioPlayer = AVAudioPlayer(contentsOf: soundUrl)
+            audioPlayer.prepareToPlay()
             audioPlayer.volume = 1.0
             audioPlayer.numberOfLoops = -1
             audioPlayer.delegate = self
