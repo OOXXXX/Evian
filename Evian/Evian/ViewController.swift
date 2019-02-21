@@ -10,7 +10,6 @@ import UIKit
 import AVFoundation
 
 let SCREEN_SIZE = UIScreen.main.bounds.size
-
 class ViewController: UIViewController, AVAudioPlayerDelegate{
     
     var audioPlayer:AVAudioPlayer = AVAudioPlayer()
