@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import AVFoundation
+
 let SCREEN_SIZE = UIScreen.main.bounds.size
 
-class ViewController: UIViewController{
-
+class ViewController: UIViewController, AVAudioPlayerDelegate{
+    
+    var audioPlayer:AVAudioPlayer = AVAudioPlayer()
+    
     override func viewDidLoad(){
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -54,8 +58,22 @@ class ViewController: UIViewController{
         topLabel.font = UIFont.systemFont(ofSize: 20)
         self.navigationItem.titleView = topLabel
         
+        let path = Bundle.main.path(forResource: "music", ofType: "mp3")
+        let soundUrl = URL(fileURLWithPath: path!)
         
+        do{
+            try audioPlayer = AVAudioPlayer(contentsOf: soundUrl)
+            audioPlayer.volume = 1.0
+            audioPlayer.numberOfLoops = -1
+            audioPlayer.delegate = self
+            audioPlayer.play()
+        }
+        catch
+        {
+            print(error)
+        }
         
+
     }
     
     @objc func hideNavigationBar()
