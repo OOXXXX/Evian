@@ -51,6 +51,7 @@ class ViewController: UIViewController{
         let topLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 180, height: 30))
         topLabel.text = "主页面"
         topLabel.textAlignment = NSTextAlignment.center
+        topLabel.font = UIFont.systemFont(ofSize: 20)
         self.navigationItem.titleView = topLabel
         
         
