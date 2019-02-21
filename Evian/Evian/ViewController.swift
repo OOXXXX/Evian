@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import MessageUI
 
 let SCREEN_SIZE = UIScreen.main.bounds.size
 class ViewController: UIViewController, AVAudioPlayerDelegate{
@@ -33,15 +34,15 @@ class ViewController: UIViewController, AVAudioPlayerDelegate{
         label.adjustsFontSizeToFitWidth = true
         self.view.addSubview(label)
        
-        let botton = UIButton(type: .custom)
-        botton.frame = CGRect(x: 30, y: 300, width: 355, height: 90)
-        botton.layer.cornerRadius = 20
-        botton.layer.masksToBounds = true
-        botton.backgroundColor = UIColor.brown
-        botton.setTitle("变色", for: UIControl.State())
-        botton.titleLabel?.font = UIFont.systemFont(ofSize: 55, weight: UIFont.Weight(rawValue: 2))
-        botton.addTarget(self, action: #selector(changeColour), for: .touchUpInside)
-        self.view.addSubview(botton)
+        let button = UIButton(type: .custom)
+        button.frame = CGRect(x: 30, y: 300, width: 355, height: 90)
+        button.layer.cornerRadius = 20
+        button.layer.masksToBounds = true
+        button.backgroundColor = UIColor.brown
+        button.setTitle("变色", for: UIControl.State())
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 55, weight: UIFont.Weight(rawValue: 2))
+        button.addTarget(self, action: #selector(changeColour), for: .touchUpInside)
+        self.view.addSubview(button)
         
         let btHideNavBar = UIButton(frame: CGRect(x: 30, y: 200, width: 355, height: 90))
         btHideNavBar.setTitle("隐藏", for: UIControl.State())
@@ -50,6 +51,14 @@ class ViewController: UIViewController, AVAudioPlayerDelegate{
         btHideNavBar.layer.cornerRadius = 20
         btHideNavBar.addTarget(self, action: #selector(ViewController.hideNavigationBar), for:  .touchUpInside)
         self.view.addSubview(btHideNavBar)
+        
+        let emailBtn = UIButton(frame: CGRect(x: 30, y: 400, width: 355, height: 90))
+        emailBtn.setTitle("邮件", for: UIControl.State())
+        emailBtn.backgroundColor = UIColor.brown
+        emailBtn.titleLabel?.font = UIFont.systemFont(ofSize: 55, weight: UIFont.Weight(rawValue: 2))
+        emailBtn.layer.cornerRadius = 20
+        emailBtn.addTarget(self, action: #selector(ViewController.sendEmail), for: UIControl.Event.touchUpInside)
+        self.view.addSubview(emailBtn)
         
         let topLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 180, height: 30))
         topLabel.text = "主页面"
@@ -97,7 +106,12 @@ class ViewController: UIViewController, AVAudioPlayerDelegate{
     {
        self.view.backgroundColor = UIColor(red: CGFloat(arc4random()%255)/255.0, green: CGFloat(arc4random()%255)/255.0, blue: CGFloat(arc4random()%255)/255.0, alpha: 1)
     }
-    
+    @objc func sendEmail()
+    {
+        let mailBox = MFMailComposeViewController()
+        self.present(mailBox, animated: true, completion: nil)
+        
+    }
 
 
 }
