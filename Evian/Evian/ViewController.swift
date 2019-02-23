@@ -72,7 +72,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, UNUserNotificatio
         self.navigationItem.titleView = topLabel
         
         let now = Date()
-        localNotification.fireDate = now.addingTimeInterval(5)
+        localNotification.fireDate = now.addingTimeInterval(10)
         localNotification.repeatInterval = NSCalendar.Unit.init(rawValue: 0)
         localNotification.timeZone = .current
         localNotification.soundName = UILocalNotificationDefaultSoundName
