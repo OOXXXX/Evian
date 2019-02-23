@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if #available(iOS 8.0, *)
         {
             let settings = UIUserNotificationSettings(types: [.alert, .badge, .sound], categories:  nil)
-            application.registerForRemoteNotifications(settings)
+            application.registerUserNotificationSettings(settings)
             
         }
         return true
