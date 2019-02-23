@@ -9,15 +9,20 @@
 import UIKit
 import AVFoundation
 import MessageUI
+import UserNotifications
+
+@available(iOS 10.0, *)
 
 let SCREEN_SIZE = UIScreen.main.bounds.size
-class ViewController: UIViewController, AVAudioPlayerDelegate{
+class ViewController: UIViewController, AVAudioPlayerDelegate, UNUserNotificationCenterDelegate{
     
     var audioPlayer:AVAudioPlayer = AVAudioPlayer()
     
     override func viewDidLoad(){
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let localNotification = UILocalNotification()
+        
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
         self.view.backgroundColor = UIColor.init(red: 254.0/255.0, green: 228.0/255.0, blue: 17.0/255.0, alpha: 1.0)
@@ -65,6 +70,19 @@ class ViewController: UIViewController, AVAudioPlayerDelegate{
         topLabel.textAlignment = NSTextAlignment.center
         topLabel.font = UIFont.systemFont(ofSize: 20)
         self.navigationItem.titleView = topLabel
+        
+        let now = Date()
+        localNotification.fireDate = now.addingTimeInterval(5)
+        localNotification.repeatInterval = NSCalendar.Unit.init(rawValue: 0)
+        localNotification.timeZone = .current
+        localNotification.soundName = UILocalNotificationDefaultSoundName
+        localNotification.alertBody = "Hi, it's time to make a decision!"
+        localNotification.applicationIconBadgeNumber = 1
+        
+        let infoDic = NSDictionary(object: "mseeage.", forKey: "infokey" as NSCopying)
+        localNotification.userInfo = infoDic as [NSObject : AnyObject]
+        
+        UIApplication.shared.scheduleLocalNotification(localNotification)
         
         
         
