@@ -14,7 +14,8 @@ import UserNotifications
 @available(iOS 10.0, *)
 
 let SCREEN_SIZE = UIScreen.main.bounds.size
-class ViewController: UIViewController, AVAudioPlayerDelegate, UNUserNotificationCenterDelegate{
+class ViewController: UIViewController, AVAudioPlayerDelegate, UNUserNotificationCenterDelegate
+{
     
     var audioPlayer:AVAudioPlayer = AVAudioPlayer()
     
