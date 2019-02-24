@@ -89,7 +89,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, UNUserNotificatio
         let session = AVAudioSession.sharedInstance()
         do{
             try session.setActive(true)
-            if #available(iOS 10.0, *) {
+            if #available(iOS 10.0, *) 
+            {
                 try session.setCategory(.playback, mode:  .default)
             }
             else
