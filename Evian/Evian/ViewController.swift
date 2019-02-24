@@ -19,7 +19,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, UNUserNotificatio
     
     var audioPlayer:AVAudioPlayer = AVAudioPlayer()
     
-    override func viewDidLoad(){
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         let localNotification = UILocalNotification()
