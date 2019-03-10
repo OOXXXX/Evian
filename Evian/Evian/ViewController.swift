@@ -74,10 +74,10 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, UNUserNotificatio
         appBtn.layer.cornerRadius = 20
         appBtn.layer.masksToBounds = true
         appBtn.backgroundColor = UIColor.brown
-        appBtn.setTitle("变色", for: UIControl.State())
+        appBtn.setTitle("应用", for: UIControl.State())
         appBtn.titleLabel?.font = UIFont.systemFont(ofSize: 55, weight: UIFont.Weight(rawValue: 2))
         appBtn.addTarget(self, action: #selector(changeColour), for: .touchUpInside)
-        self.view.addSubview(button)
+        self.view.addSubview(appBtn)
         
         let topLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 180, height: 30))
         topLabel.text = "主页面"
