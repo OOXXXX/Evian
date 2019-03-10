@@ -76,7 +76,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, UNUserNotificatio
         appBtn.backgroundColor = UIColor.brown
         appBtn.setTitle("应用", for: UIControl.State())
         appBtn.titleLabel?.font = UIFont.systemFont(ofSize: 55, weight: UIFont.Weight(rawValue: 2))
-        appBtn.addTarget(self, action: #selector(changeColour), for: .touchUpInside)
+        appBtn.addTarget(self, action: #selector(changeApp), for: .touchUpInside)
         self.view.addSubview(appBtn)
         
         let topLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 180, height: 30))
@@ -146,6 +146,12 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, UNUserNotificatio
         
     }
 
-
+    
+    @IBAction func changeApp(_ sender: UIButton)
+    {
+      
+        
+    }
+    
 }
 
