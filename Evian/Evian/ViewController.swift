@@ -51,6 +51,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, UNUserNotificatio
         button.addTarget(self, action: #selector(changeColour), for: .touchUpInside)
         self.view.addSubview(button)
         
+        
+        
         let btHideNavBar = UIButton(frame: CGRect(x: 30, y: 200, width: 355, height: 90))
         btHideNavBar.setTitle("隐藏", for: UIControl.State())
         btHideNavBar.backgroundColor = UIColor.brown
@@ -67,6 +69,16 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, UNUserNotificatio
         emailBtn.addTarget(self, action: #selector(ViewController.sendEmail), for: UIControl.Event.touchUpInside)
         self.view.addSubview(emailBtn)
         
+        let appBtn = UIButton(type: .custom)
+        appBtn.frame = CGRect(x: 30, y: 500, width: 355, height: 90)
+        appBtn.layer.cornerRadius = 20
+        appBtn.layer.masksToBounds = true
+        appBtn.backgroundColor = UIColor.brown
+        appBtn.setTitle("变色", for: UIControl.State())
+        appBtn.titleLabel?.font = UIFont.systemFont(ofSize: 55, weight: UIFont.Weight(rawValue: 2))
+        appBtn.addTarget(self, action: #selector(changeColour), for: .touchUpInside)
+        self.view.addSubview(button)
+        
         let topLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 180, height: 30))
         topLabel.text = "主页面"
         topLabel.textAlignment = NSTextAlignment.center
@@ -74,7 +86,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, UNUserNotificatio
         self.navigationItem.titleView = topLabel
         
         let now = Date()
-        localNotification.fireDate = now.addingTimeInterval(10)
+        localNotification.fireDate = now.addingTimeInterval(86400)
         localNotification.repeatInterval = NSCalendar.Unit.init(rawValue: 0)
         localNotification.timeZone = .current
         localNotification.soundName = UILocalNotificationDefaultSoundName
