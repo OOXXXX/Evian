@@ -150,6 +150,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, UNUserNotificatio
     @IBAction func changeApp(_ sender: UIButton)
     {
       
+         self.view.backgroundColor = UIColor(red: CGFloat(arc4random()%255)/255.0, green: CGFloat(arc4random()%255)/255.0, blue: CGFloat(arc4random()%255)/255.0, alpha: 1)
         
     }
     
