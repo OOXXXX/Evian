@@ -18,14 +18,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbI-mW-PNX">
-                                <rect key="frame" x="118" y="581" width="138" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.035266172989999997" green="0.2968063755" blue="0.6236641839" alpha="0.77379511440000004" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbI-mW-PNX">
+                                <rect key="frame" x="93" y="581" width="189" height="52"/>
+                                <color key="backgroundColor" red="0.74759343516903554" green="0.44328547942092045" blue="0.071117212936506899" alpha="0.77379511440000004" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.90759340609390726" green="0.83313824889142685" blue="0.073164818260023468" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
+                                        <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -35,6 +39,12 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
+                        <constraints>
+                            <constraint firstItem="hbI-mW-PNX" firstAttribute="top" secondItem="WYB-w3-VgJ" secondAttribute="top" constant="550" id="T2p-qZ-f9T"/>
+                            <constraint firstItem="hbI-mW-PNX" firstAttribute="leading" secondItem="WYB-w3-VgJ" secondAttribute="leading" constant="40" id="WaW-Gn-hFz"/>
+                            <constraint firstItem="WYB-w3-VgJ" firstAttribute="trailing" secondItem="hbI-mW-PNX" secondAttribute="trailing" constant="40" id="d5e-Ls-qe5"/>
+                            <constraint firstItem="WYB-w3-VgJ" firstAttribute="bottom" secondItem="hbI-mW-PNX" secondAttribute="bottom" constant="30" id="if0-O2-V8i"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="WYB-w3-VgJ"/>
                     </view>
                     <navigationItem key="navigationItem" id="gdM-NK-8Di"/>
