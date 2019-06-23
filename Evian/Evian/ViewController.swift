@@ -134,8 +134,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, UNUserNotificatio
         let mailBox = MFMailComposeViewController()
         self.present(mailBox, animated: true, completion: nil)
         
-        let generator = UIImpactFeedbackGenerator(style: .medium)
-        generator.impactOccurred()
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.success)
+        
     }
 
     @objc func jike()
