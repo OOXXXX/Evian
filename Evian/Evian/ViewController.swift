@@ -12,6 +12,7 @@ import MessageUI
 import UserNotifications
 
 @available(iOS 10.0, *)
+var i = 0
 
 let SCREEN_SIZE = UIScreen.main.bounds.size
 class ViewController: UIViewController, AVAudioPlayerDelegate, UNUserNotificationCenterDelegate
@@ -76,7 +77,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, UNUserNotificatio
         appBtn.backgroundColor = UIColor.brown
         appBtn.setTitle("应用", for: UIControl.State())
         appBtn.titleLabel?.font = UIFont.systemFont(ofSize: 55, weight: UIFont.Weight(rawValue: 2))
-        appBtn.addTarget(self, action: #selector(changeApp), for: .touchUpInside)
+        appBtn.addTarget(self, action: #selector(tapped), for: .touchUpInside)
         self.view.addSubview(appBtn)
         
         let topLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 180, height: 30))
@@ -154,5 +155,41 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, UNUserNotificatio
         
     }
     
-}
+    @objc func tapped() {
+        i += 1
+        print("Running \(i)")
+        
+        switch i {
+        case 1:
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.error)
+            
+        case 2:
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.success)
+            
+        case 3:
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.warning)
+            
+        case 4:
+            let generator = UIImpactFeedbackGenerator(style: .light)
+            generator.impactOccurred()
+            
+        case 5:
+            let generator = UIImpactFeedbackGenerator(style: .medium)
+            generator.impactOccurred()
+            
+        case 6:
+            let generator = UIImpactFeedbackGenerator(style: .heavy)
+            generator.impactOccurred()
+            
+        default:
+            let generator = UISelectionFeedbackGenerator()
+            generator.selectionChanged()
+            i = 0
+        }
+    
+    }
 
+}
