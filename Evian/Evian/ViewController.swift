@@ -11,6 +11,7 @@ import AVFoundation
 import MessageUI
 import UserNotifications
 
+
 @available(iOS 10.0, *)
 var i = 0
 
@@ -30,27 +31,25 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, UNUserNotificatio
         
         self.view.backgroundColor = UIColor.init(red: 254.0/255.0, green: 228.0/255.0, blue: 17.0/255.0, alpha: 1.0)
         
-        let rect = CGRect(x: 30, y: 100, width: 355, height: 90)
-        let label = UILabel(frame: rect)
-        label.text = "即刻"
-        label.font = UIFont.systemFont(ofSize: 55, weight: UIFont.Weight(rawValue: 2))
-        label.backgroundColor = UIColor.brown
-        label.textAlignment = .center
-        label.textColor = UIColor.white
-        label.layer.cornerRadius = 20
-        label.layer.masksToBounds = true
-        label.adjustsFontSizeToFitWidth = true
-        self.view.addSubview(label)
-       
         let button = UIButton(type: .custom)
-        button.frame = CGRect(x: 30, y: 300, width: 355, height: 90)
+        button.frame = CGRect(x: 30, y: 100, width: 355, height: 90)
         button.layer.cornerRadius = 20
         button.layer.masksToBounds = true
         button.backgroundColor = UIColor.brown
-        button.setTitle("变色", for: UIControl.State())
+        button.setTitle("即刻", for: UIControl.State())
         button.titleLabel?.font = UIFont.systemFont(ofSize: 55, weight: UIFont.Weight(rawValue: 2))
-        button.addTarget(self, action: #selector(changeColour), for: .touchUpInside)
+        button.addTarget(self, action: #selector(jike), for: .touchUpInside)
         self.view.addSubview(button)
+       
+        let changeButton = UIButton(type: .custom)
+        changeButton.frame = CGRect(x: 30, y: 300, width: 355, height: 90)
+        changeButton.layer.cornerRadius = 20
+        changeButton.layer.masksToBounds = true
+        changeButton.backgroundColor = UIColor.brown
+        changeButton.setTitle("变色", for: UIControl.State())
+        changeButton.titleLabel?.font = UIFont.systemFont(ofSize: 55, weight: UIFont.Weight(rawValue: 2))
+        changeButton.addTarget(self, action: #selector(changeColour), for: .touchUpInside)
+        self.view.addSubview(changeButton)
         
         
         
@@ -70,15 +69,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, UNUserNotificatio
         emailBtn.addTarget(self, action: #selector(ViewController.sendEmail), for: UIControl.Event.touchUpInside)
         self.view.addSubview(emailBtn)
         
-        let appBtn = UIButton(type: .custom)
-        appBtn.frame = CGRect(x: 30, y: 500, width: 355, height: 90)
-        appBtn.layer.cornerRadius = 20
-        appBtn.layer.masksToBounds = true
-        appBtn.backgroundColor = UIColor.brown
-        appBtn.setTitle("应用", for: UIControl.State())
-        appBtn.titleLabel?.font = UIFont.systemFont(ofSize: 55, weight: UIFont.Weight(rawValue: 2))
-        appBtn.addTarget(self, action: #selector(tapped), for: .touchUpInside)
-        self.view.addSubview(appBtn)
+         
         
         let topLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 180, height: 30))
         topLabel.text = "主页面"
@@ -99,8 +90,6 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, UNUserNotificatio
         
         UIApplication.shared.scheduleLocalNotification(localNotification)
         
-        
-        
         let session = AVAudioSession.sharedInstance()
         do{
             try session.setActive(true)
@@ -108,13 +97,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, UNUserNotificatio
             {
                 try session.setCategory(.playback, mode:  .default)
             }
-            else
-            {
-
-            }
             UIApplication.shared.beginReceivingRemoteControlEvents()
             
-            let path = Bundle.main.path(forResource: "music", ofType: "mp3")
+            let path = Bundle.main.path(forResource: "Imagine", ofType: "mp3")
             let soundUrl = URL(fileURLWithPath: path!)
             try audioPlayer = AVAudioPlayer(contentsOf: soundUrl)
             audioPlayer.prepareToPlay()
@@ -127,32 +112,58 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, UNUserNotificatio
         {
             print(error)
         }
-        
-
-    }
+     }
     
     @objc func hideNavigationBar()
     {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
+        
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.impactOccurred()
     }
     
     @objc func changeColour()
     {
        self.view.backgroundColor = UIColor(red: CGFloat(arc4random()%255)/255.0, green: CGFloat(arc4random()%255)/255.0, blue: CGFloat(arc4random()%255)/255.0, alpha: 1)
+        
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.impactOccurred()
     }
     @objc func sendEmail()
     {
         let mailBox = MFMailComposeViewController()
         self.present(mailBox, animated: true, completion: nil)
         
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.impactOccurred()
     }
 
+    @objc func jike()
+    {
+        if let url  = URL(string: "https://web.okjike.com/login?redirect=/feed") // Change the URL with the URL Scheme
+        {
+            if UIApplication.shared.canOpenURL(url)
+            {
+                UIApplication.shared.openURL(url)
+            }
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.success)
+        }
+    }
     
-    @IBAction func changeApp(_ sender: UIButton)
+    @IBAction func changeApp(_ sender: AnyObject)
     {
       
-         self.view.backgroundColor = UIColor(red: CGFloat(arc4random()%255)/255.0, green: CGFloat(arc4random()%255)/255.0, blue: CGFloat(arc4random()%255)/255.0, alpha: 1)
-        
+        if let url  = URL(string: "https://web.okjike.com/login?redirect=/feed") // Change the URL with the URL Scheme
+        {
+            if UIApplication.shared.canOpenURL(url)
+            {
+                UIApplication.shared.openURL(url)
+            }
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.success)
+        }
+       
     }
     
     @objc func tapped() {

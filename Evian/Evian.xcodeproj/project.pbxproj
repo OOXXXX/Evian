@@ -15,6 +15,7 @@
 		5FD9AFB1221BDCFD00A07884 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FD9AFAF221BDCFD00A07884 /* LaunchScreen.storyboard */; };
 		5FD9AFBC221BDCFD00A07884 /* EvianTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD9AFBB221BDCFD00A07884 /* EvianTests.swift */; };
 		5FD9AFC7221BDCFD00A07884 /* EvianUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD9AFC6221BDCFD00A07884 /* EvianUITests.swift */; };
+		5FE7AC3E22BF771D0067EE45 /* Imagine.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5FE7AC3D22BF771D0067EE45 /* Imagine.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		5FD9AFC2221BDCFD00A07884 /* EvianUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EvianUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FD9AFC6221BDCFD00A07884 /* EvianUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvianUITests.swift; sourceTree = "<group>"; };
 		5FD9AFC8221BDCFD00A07884 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FE7AC3D22BF771D0067EE45 /* Imagine.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Imagine.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				5F3B9F2822B36E4E00EF785D /* Evian.entitlements */,
+				5FE7AC3D22BF771D0067EE45 /* Imagine.mp3 */,
 				5F873298221E7B4800671A8D /* music.mp3 */,
 				5FD9AFA6221BDCFC00A07884 /* AppDelegate.swift */,
 				5FD9AFA8221BDCFC00A07884 /* ViewController.swift */,
@@ -239,6 +242,7 @@
 			files = (
 				5FD9AFB1221BDCFD00A07884 /* LaunchScreen.storyboard in Resources */,
 				5FD9AFAE221BDCFD00A07884 /* Assets.xcassets in Resources */,
+				5FE7AC3E22BF771D0067EE45 /* Imagine.mp3 in Resources */,
 				5FD9AFAC221BDCFC00A07884 /* Main.storyboard in Resources */,
 				5F873299221E7B4800671A8D /* music.mp3 in Resources */,
 			);
