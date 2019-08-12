@@ -11,7 +11,6 @@ import AVFoundation
 import MessageUI
 import UserNotifications
 
-
 @available(iOS 10.0, *)
 var i = 0
 
@@ -32,7 +31,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, UNUserNotificatio
         self.view.backgroundColor = UIColor.init(red: 254.0/255.0, green: 228.0/255.0, blue: 17.0/255.0, alpha: 1.0)
         
         let button = UIButton(type: .custom)
-        button.frame = CGRect(x: 30, y: 100, width: 355, height: 90)
+        button.frame = CGRect(x: 30, y: 100, width: 315, height: 90)
         button.layer.cornerRadius = 20
         button.layer.masksToBounds = true
         button.backgroundColor = UIColor.brown
@@ -42,7 +41,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, UNUserNotificatio
         self.view.addSubview(button)
        
         let changeButton = UIButton(type: .custom)
-        changeButton.frame = CGRect(x: 30, y: 300, width: 355, height: 90)
+        changeButton.frame = CGRect(x: 30, y: 300, width: 315, height: 90)
         changeButton.layer.cornerRadius = 20
         changeButton.layer.masksToBounds = true
         changeButton.backgroundColor = UIColor.brown
@@ -53,7 +52,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, UNUserNotificatio
         
         
         
-        let btHideNavBar = UIButton(frame: CGRect(x: 30, y: 200, width: 355, height: 90))
+        let btHideNavBar = UIButton(frame: CGRect(x: 30, y: 200, width: 315, height: 90))
         btHideNavBar.setTitle("隐藏", for: UIControl.State())
         btHideNavBar.backgroundColor = UIColor.brown
         btHideNavBar.titleLabel?.font = UIFont.systemFont(ofSize: 55, weight: UIFont.Weight(rawValue: 2))
@@ -61,7 +60,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, UNUserNotificatio
         btHideNavBar.addTarget(self, action: #selector(ViewController.hideNavigationBar), for:  .touchUpInside)
         self.view.addSubview(btHideNavBar)
         
-        let emailBtn = UIButton(frame: CGRect(x: 30, y: 400, width: 355, height: 90))
+        let emailBtn = UIButton(frame: CGRect(x: 30, y: 400, width: 315, height: 90))
         emailBtn.setTitle("邮件", for: UIControl.State())
         emailBtn.backgroundColor = UIColor.brown
         emailBtn.titleLabel?.font = UIFont.systemFont(ofSize: 55, weight: UIFont.Weight(rawValue: 2))
@@ -78,7 +77,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, UNUserNotificatio
         self.navigationItem.titleView = topLabel
         
         let now = Date()
-        localNotification.fireDate = now.addingTimeInterval(86400)
+        localNotification.fireDate = now.addingTimeInterval(216000)
         localNotification.repeatInterval = NSCalendar.Unit.init(rawValue: 0)
         localNotification.timeZone = .current
         localNotification.soundName = UILocalNotificationDefaultSoundName
